@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.closed{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background: #c5c5c5;
+}
+
+.opened{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+.board{
+  width: 300px;
+  margin: auto;
+}
+
+.item{
+  position: relative;
+}
+
+.item::after{
+  content: 'X';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
