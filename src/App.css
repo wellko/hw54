@@ -1,41 +1,13 @@
 .App {
   text-align: center;
+  font-family: 'Schwifty', sans-serif;
+  background-image: url(components/img/Rick.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 30%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .closed{
   display: inline-block;
@@ -43,6 +15,7 @@
   height: 40px;
   margin: 5px;
   background: #c5c5c5;
+  cursor: url(components/img/cursor.cur), pointer;
 }
 
 .opened{
@@ -50,6 +23,7 @@
   width: 40px;
   height: 40px;
   margin: 5px;
+  cursor: url(components/img/cursor.cur), pointer;
 }
 
 .board{
@@ -62,11 +36,37 @@
 }
 
 .item::after{
-  content: 'X';
+  content: '';
+  background-image: url(components/img/portal.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 40px;
   height: 40px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.counter {
+  color: #22FFFF;
+  text-shadow: 0px 4px 8px #60C43E;
+  margin-top: 20px;
+  font-size: 30px;
+
+}
+
+.reset_btn{
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: 'Schwifty', sans-serif;
+  color: #22A2BD;
+  text-shadow: 0px 4px 8px #60C43E;
+  padding:5px 20px;
+  border: 3px solid #7FFE48;
+  border-radius: 6px;
+}
+
+.reset_btn:hover {
+  cursor: url(components/img/cursor.cur), pointer;
 }

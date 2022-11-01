@@ -1,15 +1,16 @@
 import React from "react";
 
-const Counter = (count: count) => {
-	return (
-		<div>
-			<span>{count.counter}</span>
-		</div>
-	)
+interface count {
+    counter: number
 }
 
-interface count {
-	counter:number
+const Counter = (count: count) => {
+    return (
+        <div className='counter'>
+            <span> Tries: {count.counter}</span>
+        </div>
+    )
 }
+
 
 export default Counter

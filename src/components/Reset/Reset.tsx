@@ -1,15 +1,15 @@
 import React from "react";
 
-const Reset = (props:resetProps) => {
-	return (
-		<div>
-			<button type="button" onClick={props.action}>Reset</button>
-		</div>
-	)
+interface resetProps {
+    action: React.MouseEventHandler;
 }
 
-interface resetProps {
-	action: React.MouseEventHandler;
+const Reset = (props: resetProps) => {
+    return (
+        <div>
+            <button type="button" className='reset_btn' onClick={props.action}>Reset</button>
+        </div>
+    )
 }
 
 export default Reset;

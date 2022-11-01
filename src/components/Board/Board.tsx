@@ -1,25 +1,28 @@
 import React from "react";
 import Cell from "../Cell/Cell";
 
-const Board: React.FC<PropsBoard> = (props) => {
-	const cells = (props.cells.map((item,i) => (
-			<Cell hasItem={item.hasItem} clicked={item.clicked} key={i} click={item.click}/>
-		))
-	)
-
-	return(
-		<div className='board'>
-			{cells}
-		</div>
-	)
-}
-
 interface PropsBoard {
-	cells: Cells[]
+    cells: Cells[]
 }
 
 interface Cells {
-	hasItem: boolean, clicked: boolean, click?: React.MouseEventHandler;
+    hasItem: boolean,
+    clicked: boolean,
+    click: React.MouseEventHandler;
+}
+
+
+const Board: React.FC<PropsBoard> = (props) => {
+    const cells = (props.cells.map((item, i) => (
+            <Cell hasItem={item.hasItem} clicked={item.clicked} key={i} click={item.click}/>
+        ))
+    )
+
+    return (
+        <div className='board'>
+            {cells}
+        </div>
+    )
 }
 
 
